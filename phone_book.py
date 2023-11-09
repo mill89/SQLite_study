@@ -41,6 +41,5 @@ if __name__ == '__main__':
     # create_db(DB_NAME) # созданние БД
 
     add_data_table(*map(str, input().split()))  # добавление записи в БД
-
-
     show_bd()  # вывод данных
+
