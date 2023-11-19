@@ -3,3 +3,5 @@
 .git
 venv/pyvenv.cfg
 phonebook.db
+
+meeting schedule.db

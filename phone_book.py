@@ -19,7 +19,7 @@ def add_data_table(fio: str, specialization: str, phone_number: str) -> None:
     # добавляем данные в таблицу
     with sq.connect(DB_NAME) as con:
         cur = con.cursor()
-        cur.execute(f'''INSERT INTO {TABLE_NAME}(fio, specialization, number) VALUES(?, ?, ?)''',
+        cur.execute(f'''INSERT INTO {TABLE_NAME}(fio, specialization, number) VALUES(? ? ?)''',
                     (fio, specialization, phone_number))
 
 
@@ -47,7 +47,7 @@ def show_bd():
     print('~ Phonebook ~\n')
     for s in get_data():  # чтение из БД
         a, b, c = s[1:]
-        print(f'Name: {a} \nspec: {b}, \ntel: {c}\n{'-' * 20}')
+        print(f'Name: {a} \nspec: {b} \ntel: {c} \n{'-' * 20}')
 
 
 if __name__ == '__main__':
